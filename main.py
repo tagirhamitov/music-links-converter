@@ -13,7 +13,7 @@ dp = Dispatcher()
 @dp.message()
 async def message_handler(message: Message):
     try:
-        response = convert(message.text.split()[1])
+        response = convert(message.text)
     except:
         response = "Иди нахуй"
     await message.reply(response)
